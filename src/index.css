@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-light-gray: #8e9caa;
+  --color-mild-gray: #343a40;
+  --color-main-black: #212529;
+  --color-disabled: #ccc;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+#loading {
+  animation-name: loading;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+}
+
+@keyframes loading {
+  0% {
+    background-color: var(--color-mild-gray);
+  }
+
+  50% {
+    background-color: var(--color-light-gray);
+  }
+
+  100% {
+    background-color: var(--color-mild-gray);
+  }
+}
